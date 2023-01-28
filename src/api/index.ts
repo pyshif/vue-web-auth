@@ -11,6 +11,7 @@ import * as Token from './auth/token'
 import * as User from './auth/user'
 import * as TellMe from './help/tellme'
 
+export type { AxiosError } from 'axios'
 export type { ForgotData, ResetPasswordByLinkData } from './auth/forgot'
 export type { GoogleResponseData } from './auth/gsi'
 export type { ResetPasswordData } from './auth/reset'
