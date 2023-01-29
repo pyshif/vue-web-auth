@@ -41,4 +41,10 @@ export const GoogleSignOut = (axios: AxiosInstance) => (hint: string) => {
         if (error) return console.log('google revoke error :>>', error);
         // console.log('google revoke success!',)
     })
+
+    return axios({
+        method: 'DELETE',
+        url: routes.auth.signOut.DELETE,
+        withCredentials: true
+    })
 }
