@@ -1,17 +1,18 @@
 import type { SignUpData, AxiosError } from '@/api'
-import type { Auth } from './data'
+import type { Auth, AuthHookReturn } from './data'
 import { apiSignUp } from '@/api'
 
-export type ApiSignUp = (data: SignUpData) => Promise<void | AxiosError>
+export type ApiSignUp = (data: SignUpData) => Promise<AuthHookReturn>
 
 export function createUseSignUp(auth: Auth): ApiSignUp {
     return async (data) => {
         try {
-            const response = await apiSignUp(data);
+            const response = await apiSignUp(data)
+            if (response.status != 200) throw new Error('failed to sign-up!')
             // console.log('response :>> ', response);
-            return
+            return { error: null, auth }
         } catch (error) {
-            return error as AxiosError
+            return { error, auth } as AuthHookReturn
         }
     }
 }

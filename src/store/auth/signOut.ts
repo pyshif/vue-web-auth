@@ -1,8 +1,8 @@
-import type { AxiosError } from "@/api"
-import { resetAuth, type Auth } from './data'
+import type { Auth, AuthHookReturn } from './data'
+import { resetAuth } from './data'
 import { apiSignOut } from '@/api'
 
-export type ApiSignOut = () => Promise<void | AxiosError>
+export type ApiSignOut = () => Promise<AuthHookReturn>
 
 export function createUseSignOut(auth: Auth): ApiSignOut {
     return async () => {
@@ -10,9 +10,9 @@ export function createUseSignOut(auth: Auth): ApiSignOut {
             const response = await apiSignOut()
             // console.log('response :>> ', response);
             resetAuth(auth)
-            return
+            return { error: null, auth }
         } catch (error) {
-            return error as AxiosError
+            return { error, auth } as AuthHookReturn
         }
     }
 }

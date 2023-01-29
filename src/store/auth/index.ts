@@ -1,4 +1,4 @@
-export type { Auth } from './data'
+export type { Auth, AuthHookReturn } from './data'
 export type { ApiForgotPassword, ApiResetPasswordByLink } from './forgot'
 export type { ApiGoogleSignIn, ApiGoogleSignOut } from './google'
 export type { ApiHealth } from './health'
