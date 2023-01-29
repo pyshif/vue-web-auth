@@ -2,8 +2,6 @@ import type { Axios, AxiosInstance } from 'axios';
 import routes from '@/api/routes';
 import { reverse } from 'named-urls';
 
-export type UpdateUserAvatarData = FormData;
-
 export const DeleteUser = (axios: AxiosInstance) => (accessToken: string) => {
     return axios({
         method: 'DELETE',
@@ -67,7 +65,7 @@ export const UpdateUserEmail = (axios: AxiosInstance) => (accessToken: string, e
     });
 }
 
-export const UpdateUserAvatar = (axios: AxiosInstance) => (accessToken: string, data: UpdateUserAvatarData) => {
+export const UpdateUserAvatar = (axios: AxiosInstance) => (accessToken: string, data: FormData) => {
     return axios({
         method: 'POST',
         url: routes.auth.user.avatar.POST,
