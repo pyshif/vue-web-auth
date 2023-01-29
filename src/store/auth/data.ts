@@ -1,35 +1,43 @@
 export type Auth = {
-    token: string,
+    token: null | string
     user: {
-        name: string,
-        birthday: string,
-        phone: string,
-        gender: 'male' | 'female' | '',
-        avatar: string,
-        email: string
-    },
+        name: null | string
+        birthday: null | string
+        phone: null | string
+        gender: null | 'male' | 'female'
+        avatar: null | string
+        email: null | string
+    }
+}
+
+export function isEmptyToken(auth: Auth) {
+    return auth.token == null
+}
+
+export function isEmptyToken(auth: Auth) {
+    return auth.token == ''
 }
 
 export function resetAuth(auth: Auth) {
-    auth.token = ''
+    auth.token = null
     auth.user = {
-        name: '',
-        birthday: '',
-        phone: '',
-        gender: '',
-        avatar: '',
-        email: ''
+        name: null,
+        birthday: null,
+        phone: null,
+        gender: null,
+        avatar: null,
+        email: null,
     }
 }
 
 export const initialState = {
-    token: '',
+    token: null,
     user: {
-        name: '',
-        birthday: '',
-        phone: '',
-        gender: '',
-        avatar: '',
-        email: ''
-    }
+        name: null,
+        birthday: null,
+        phone: null,
+        gender: null,
+        avatar: null,
+        email: null,
+    },
 }
