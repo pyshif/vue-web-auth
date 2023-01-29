@@ -14,10 +14,6 @@ export function isEmptyToken(auth: Auth) {
     return auth.token == null
 }
 
-export function isEmptyToken(auth: Auth) {
-    return auth.token == ''
-}
-
 export function resetAuth(auth: Auth) {
     auth.token = null
     auth.user = {
