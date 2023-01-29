@@ -37,8 +37,8 @@ import {
     createUseUpdateUserGender,
     createUseUpdateUserName,
     createUseUpdateUserPhone,
-    createUserUpdateUserEmail,
-    createUserValidateToken,
+    createUseUpdateUserEmail,
+    createUseValidateToken,
 } from './auth'
 import { createUseTellMe } from './help'
 
@@ -68,6 +68,6 @@ export const useUpdateUserBirthday = createUseUpdateUserBirthday(store.auth)
 export const useUpdateUserGender = createUseUpdateUserGender(store.auth)
 export const useUpdateUserName = createUseUpdateUserName(store.auth)
 export const useUpdateUserPhone = createUseUpdateUserPhone(store.auth)
-export const userUpdateUserEmail = createUserUpdateUserEmail(store.auth)
-export const userValidateToken = createUserValidateToken(store.auth)
+export const useUpdateUserEmail = createUseUpdateUserEmail(store.auth)
+export const useValidateToken = createUseValidateToken(store.auth)
 export const useTellMe = createUseTellMe(store.auth)

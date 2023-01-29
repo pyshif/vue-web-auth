@@ -24,12 +24,12 @@ export { createUseResetPassword } from './reset'
 export { createUseSignIn } from './signIn'
 export { createUseSignOut } from './signOut'
 export { createUseSignUp } from './signUp'
-export { createUseRequestToken, createUserValidateToken } from './token'
+export { createUseRequestToken, createUseValidateToken } from './token'
 export {
     createUseUpdateUserAvatar,
     createUseUpdateUserBirthday,
     createUseUpdateUserGender,
     createUseUpdateUserName,
     createUseUpdateUserPhone,
-    createUserUpdateUserEmail,
+    createUseUpdateUserEmail,
 } from './user'

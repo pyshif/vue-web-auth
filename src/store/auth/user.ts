@@ -87,7 +87,7 @@ export function createUseUpdateUserGender(auth: Auth): ApiUpdateUserGender {
     }
 }
 
-export function createUserUpdateUserEmail(auth: Auth): ApiUpdateUserEmail {
+export function createUseUpdateUserEmail(auth: Auth): ApiUpdateUserEmail {
     return async (email) => {
         try {
             if (isEmptyToken(auth))

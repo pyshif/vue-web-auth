@@ -21,7 +21,7 @@ export function createUseRequestToken(auth: Auth): ApiRequestToken {
     }
 }
 
-export function createUserValidateToken(auth: Auth): ApiValidateToken {
+export function createUseValidateToken(auth: Auth): ApiValidateToken {
     return async () => {
         try {
             const response = await apiValidateToken(auth.token)
