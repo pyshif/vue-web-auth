@@ -8,7 +8,7 @@ export function createUseSignOut(auth: Auth): ApiSignOut {
     return async () => {
         try {
             const response = await apiSignOut()
-            console.log('response :>> ', response);
+            // console.log('response :>> ', response);
             resetAuth(auth)
             return
         } catch (error) {
