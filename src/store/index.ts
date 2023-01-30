@@ -50,7 +50,7 @@ export type Store = {
 }
 
 export const store: Store = reactive({
-    auth: authInitialState,
+    auth: { ...authInitialState },
 })
 
 export const useForgotPassword = createUseForgotPassword(store.auth)
