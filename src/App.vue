@@ -1,28 +1,29 @@
 <script setup lang="ts">
 import { RouterLink, RouterView } from 'vue-router'
+import Link from '@/components/Link.vue'
 // import HelloWorld from './components/HelloWorld.vue'
 </script>
 
 <template>
     <header>
         <h1>Navbar Component</h1>
-        <RouterLink to="/">Home</RouterLink>
+        <Link to="/">Home</Link>
         <br />
-        <RouterLink to="/auth">Auth</RouterLink>
+        <Link to="/auth">Auth</Link>
         <br />
-        <RouterLink to="/auth/signin">SignIn</RouterLink>
+        <Link to="/auth/signin">SignIn</Link>
         <br />
-        <RouterLink to="/auth/signup">SignUp</RouterLink>
+        <Link to="/auth/signup">SignUp</Link>
         <br />
-        <RouterLink to="/auth/forgot">Forgot</RouterLink>
+        <Link to="/auth/forgot">Forgot</Link>
         <br />
-        <RouterLink to="/auth/reset">Reset</RouterLink>
+        <Link to="/auth/reset">Reset</Link>
         <br />
-        <RouterLink to="/auth/reset/e3142">Reset Id</RouterLink>
+        <Link to="/auth/reset/e3142">Reset Id</Link>
         <br />
-        <RouterLink to="/auth/user">User</RouterLink>
+        <Link to="/auth/user">User</Link>
         <br />
-        <RouterLink to="/error">Error</RouterLink>
+        <Link to="/error">Error</Link>
         <br />
     </header>
     <div id="content">
