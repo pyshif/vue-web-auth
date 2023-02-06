@@ -20,6 +20,8 @@ import type {
 } from './auth'
 import type { ApiTellMe } from './help'
 
+export type { Auth } from './auth'
+
 import {
     initialState as authInitialState,
     createUseForgotPassword,
